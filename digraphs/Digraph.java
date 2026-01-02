@@ -138,6 +138,18 @@ public class Digraph
 	}
 
 	// TODO: Implement reverse method
+	public Digraph reverse() {
+    	Digraph R = new Digraph(V);
+
+    	for (int v = 0; v < V; v++) {
+    		for (int w : adj[v]) {
+            	R.addEdge(w, v);
+        	}
+    	}
+
+    	return R;
+	}
+
 	// TODOL Implement indegree method
 
 	public String toString()
